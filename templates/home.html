@@ -1,7 +1,10 @@
 {% extends "layout.html" %}
 
+<!-- Page title -->
+{% block title %}{{ super() }} Python Flask App {% endblock %}
+
 {% block content %}
-
-<p>Welcome to my site made with python</p>
-
+<br>
+<p>Welcome, this site is being rendered by python with a web framework called Flask</p>
+<br>
 {% endblock %}

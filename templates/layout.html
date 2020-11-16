@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = '/css/main.css') }}">
 </head>
 <body>
     <nav>
@@ -14,11 +16,19 @@
         </ul>
     </nav>
 
-    {% block content %}
-    {% endblock %}
+
+    <section class="container">
+
+        <!-- To avoid rewriting code we use layouts -->
+        {% block content %}
+        {% endblock %}
+
+    </section>
     
+    <br>
+    <span class="space"></span>
     <footer>
-        <p>Copyright 2020 - 2021 <a href="https://www.mrfabri.com"  target="_blank">Mr. Fabri</a></p>
+        <p><a href="https://www.mrfabri.com" target="_blank">Mr. Fabri </a>| Copyright 2020 - 2021, All rights reserved</p>
     </footer>
 </body>
 </html>
